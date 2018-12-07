@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - loaders - OBJ loader</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				font-family: Monospace;
+				background-color: #000;
+				color: #fff;
+				margin: 0px;
+				overflow: hidden;
+			}
+			#info {
+				color: black;
+				position: absolute;
+				top: 10px;
+				width: 100%;
+				text-align: center;
+				z-index: 100;
+				display:block;
+			}
+			#info a, .button { color: #f00; font-weight: bold; text-decoration: underline; cursor: pointer }
+		</style>
+	</head>
+
+	<body>
+		<div id="info">
+			First Model + texture Tests (with gltf )
+		</div>
+
+		<script src="./Js/three.min.js"></script>
+		<script src="./Js/Loaders/OBJLoader.js"></script>
+		<script src="./js/OrbitControls.js"></script>
+		<script src="./Js/Loaders/GLTFLoader.js"></script>
+
+		<script>
+			var container;
+			var camera, scene, renderer;
+			var mouseX = 0, mouseY = 0;
+			var windowHalfX = window.innerWidth / 2;
+			var windowHalfY = window.innerHeight / 2;
+			var object;
+			
+			var controls;
+
+			init();
+			animate();
+
+			function init() {
+				container = document.createElement( 'div' );
+				document.body.appendChild( container );
+				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.25, 50 );
+				camera.position.y = 3
+				camera.position.z = 3
+
+				onMouseDownPosition = new THREE.Vector2();
+
+				//controls:
+				controls = new THREE.OrbitControls( camera );
+				controls.target.set( 0, - 0.2, - 0.2 );
+				controls.update();
+
+				// scene
+				scene = new THREE.Scene();
+				var ambientLight = new THREE.AmbientLight( 0xcccccc, 0.4 );
+				scene.add( ambientLight );
+				//var pointLight = new THREE.PointLight( 0xffffff, 0.8 );
+				//camera.add( pointLight );
+				light = new THREE.HemisphereLight( 0xbbbbff, 0x444422 );
+				light.position.set( 0, 1, 0 );
+				scene.add( light );
+				scene.add( camera );
+
+				//background
+				var urls = [ 'px.jpg', 'nx.jpg', 'py.jpg', 'ny.jpg', 'pz.jpg', 'nz.jpg' ];
+				var loader = new THREE.CubeTextureLoader().setPath( 'textures/skyboxsun25deg/' );
+				var background = loader.load( urls );
+				scene.background = background;
+
+				// model
+				var loader = new THREE.GLTFLoader().setPath( 'models/DamagedHelmet/glTF/' );
+				loader.load( 'DamagedHelmet.gltf', function ( gltf ) {
+					gltf.scene.traverse( function ( child ) {
+						if ( child.isMesh ) {
+							child.material.envMap = background;
+						}
+					} );
+					scene.add( gltf.scene );
+				}, undefined, function ( e ) {
+					console.error( e );
+				} );
+
+				//Prepare Renderer
+				renderer = new THREE.WebGLRenderer({ antialias: true });
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				renderer.gammaOutput = true;
+				container.appendChild( renderer.domElement );
+
+				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+				document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+				document.addEventListener( 'mouseup', onDocumentMouseUp, false );
+				document.addEventListener( 'wheel', onDocumentMouseWheel, false );
+
+				document.addEventListener( 'contextmenu', contextmenu, false );
+
+				window.addEventListener( 'resize', onWindowResize, false );
+			}
+
+			function contextmenu( event ) {
+				event.preventDefault();
+			}
+
+
+			function onWindowResize() {
+				windowHalfX = window.innerWidth / 2;
+				windowHalfY = window.innerHeight / 2;
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+			}
+
+			function onDocumentMouseMove( event ) {
+
+			}
+
+			function onDocumentMouseDown( event ) {
+				console.log("down");
+			}
+			function onDocumentMouseUp( event ) {
+
+			}
+
+			function onDocumentMouseWheel( event ) {
+
+			}
+			//
+			function animate() {
+				requestAnimationFrame( animate );
+				render();
+			}
+			function render() {
+				renderer.render( scene, camera );
+			}
+		</script>
+
+	</body>
+</html>

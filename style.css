@@ -1,0 +1,47 @@
+html {
+    display: flex;
+    /* justify-content: center; */
+    background-color: lavender;
+    background-image: url(spongebob_meme.jpg);
+    background-repeat: repeat-x;
+    font-family: 'Lato', sans-serif;
+}
+
+.body {
+    display: table;
+    width: 100%;
+  }
+
+#filter{
+    background-color: crimson;
+    position: absolute;
+    left: 0px;
+    width: 10%;
+}
+
+#list{
+    background-color: blue;
+    position: absolute;
+    right: 0px;
+    width: 90%;
+}
+
+nav ul {
+    height: 500px;
+    /* width: 100%; */
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+ul {
+    /* background-color: lightcyan; */
+    /* padding: 1em; */
+}
+
+li.name {
+    background-color: red
+}
+
+div.price {
+    background-color: brown;
+}
