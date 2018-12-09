@@ -51,26 +51,28 @@
 			function init() {
 				container = document.createElement( 'div' );
 				document.body.appendChild( container );
-				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.25, 50 );
-				camera.position.y = 3
-				camera.position.z = 3
+				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.25, 500 );
+				camera.position.x = 33
+				camera.position.y = 10
+				camera.position.z = -30
 
 				onMouseDownPosition = new THREE.Vector2();
 
 				//controls:
 				controls = new THREE.OrbitControls( camera );
-				controls.target.set( 0, - 0.2, - 0.2 );
+				controls.target.set( 35, 0.8, - 30 );
+				controls.maxPolarAngle = Math.PI/2.001;
 				controls.update();
 
 				// scene
 				scene = new THREE.Scene();
 				var ambientLight = new THREE.AmbientLight( 0xcccccc, 0.4 );
 				scene.add( ambientLight );
-				//var pointLight = new THREE.PointLight( 0xffffff, 0.8 );
-				//camera.add( pointLight );
+				var pointLight = new THREE.PointLight( 0xffffff, 0.8 );
+				camera.add( pointLight );
 				light = new THREE.HemisphereLight( 0xbbbbff, 0x444422 );
-				light.position.set( 0, 1, 0 );
-				scene.add( light );
+				light.position.set( 34, 1, -30 );
+				//scene.add( light );
 				scene.add( camera );
 
 				//background
@@ -80,8 +82,8 @@
 				scene.background = background;
 
 				// model
-				var loader = new THREE.GLTFLoader().setPath( 'models/DamagedHelmet/glTF/' );
-				loader.load( 'DamagedHelmet.gltf', function ( gltf ) {
+				var loader = new THREE.GLTFLoader().setPath( 'models/House/' );
+				loader.load( 'House2.gltf', function ( gltf ) {
 					gltf.scene.traverse( function ( child ) {
 						if ( child.isMesh ) {
 							child.material.envMap = background;
@@ -143,6 +145,7 @@
 			}
 			function render() {
 				renderer.render( scene, camera );
+				//console.log( renderer.info );
 			}
 		</script>
 
