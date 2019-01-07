@@ -13,7 +13,7 @@ html {
   }
 
 #filter{
-    background-color: crimson;
+    background-color: blanchedalmond;
     position: absolute;
     left: 0px;
     width: 10%;
@@ -34,9 +34,16 @@ nav ul {
 }
 
 ul {
-    /* background-color: lightcyan; */
-    /* padding: 1em; */
-}
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      position: -webkit-sticky; /* Safari */
+      position: sticky;
+      top: 0;
+
+    }
 
 li.name {
     background-color: red
@@ -45,3 +52,23 @@ li.name {
 div.price {
     background-color: brown;
 }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+
+    .active {
+      background-color: #4CAF50;
+    }
