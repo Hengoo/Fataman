@@ -16,9 +16,28 @@
 
     <div class="topnav">
         <img src="pictures/reinvent.jpg" width="183" height="48" href="Fataman.html">
-        <a href="#Log in">Log in</a>
+
         <a href="#Contact">Contact</a>
         <a href="#About">About</a>
+
+        <div class="dropdown">
+             <button class="dropbtn">Login
+               <i class="fa fa-caret-down"></i>
+             </button>
+                 <div class="dropdown-content">
+                     <div class="login-container">
+                         <form action="/action_page.php">
+                         <input type="text" placeholder="Username" name="username">
+                         <input type="text" placeholder="Password" name="psw">
+                         <a href="http://google.com" class="button">Login</a>
+                         </form>
+                     </div>
+                 </div>
+        </div>
+
+
+
+
         <div class="dropdown">
              <button class="dropbtn">Search
                <i class="fa fa-caret-down"></i>
@@ -28,7 +47,8 @@
                  <a href="#">Buy Property</a>
                  </div>
         </div>
-      <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
 
 
@@ -56,7 +76,11 @@
 		</div>
 	</section>
 
-	<footer>footer area</footer>
+	<div class="footer">
+
+        <p style="display:inline" href="#Copyright">Copyright 2019 Fataman. All rights reserved.</p>
+
+    </div>
 
 
 </body>
