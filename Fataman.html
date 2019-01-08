@@ -14,13 +14,34 @@
 <body>
 
 
-	<ul>
-	  <img src="pictures/reinvent.jpg" width="183" height="48" href="Fataman.html">
-      <li><a href="#home">Log in</a></li>
-      <li><a href="#news">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#about">Search</a></li>
-	</ul>
+    <div class="topnav">
+        <img src="pictures/reinvent.jpg" width="183" height="48" href="Fataman.html">
+        <a href="#Log in">Log in</a>
+        <a href="#Contact">Contact</a>
+        <a href="#About">About</a>
+        <div class="dropdown">
+             <button class="dropbtn">Search
+               <i class="fa fa-caret-down"></i>
+             </button>
+                 <div class="dropdown-content">
+                 <a href="#">Rent Property</a>
+                 <a href="#">Buy Property</a>
+                 </div>
+        </div>
+      <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
 
 	<section id = "body">
 		<div id ="filter">
@@ -36,6 +57,8 @@
 	</section>
 
 	<footer>footer area</footer>
+
+
 </body>
 
 </html>
