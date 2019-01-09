@@ -431,7 +431,7 @@ h1 {
 
 h2 {
     display: block;
-    font-size: 2em;
+    font-size: 1.3em;
     margin-block-start: 2em;
     margin-block-end: 2em;
     margin-inline-start: 30px;
@@ -448,7 +448,7 @@ h2 {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 4px 20px;
   cursor: pointer;
 }
 
