@@ -418,3 +418,41 @@ span.psw {
   color: white;
   text-align: center;
 }
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 2em;
+    margin-block-end: 2em;
+    margin-inline-start: 30px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h2 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 2em;
+    margin-block-end: 2em;
+    margin-inline-start: 30px;
+    margin-inline-end: 0px;
+
+}
+
+.button {
+  background-color: #2e4855;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #223845;
+  color: white;
+}
