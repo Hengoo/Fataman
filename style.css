@@ -32,9 +32,18 @@ body {
   color: #ffffff;
 }
 
+.header .container .header--logo {
+    color: #000000;
+    font-weight: 300;
+    font-size: 24px;
+    display: inline-block;
+    margin: 14px 0;
+    float: right;
+}
+
 .header a.active {
-  background-color: #ffffff;
-  color: #ffffff;
+  background-color: #000000;
+  color: #000000;
 }
 
 .header-right {
@@ -128,6 +137,19 @@ div.price {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+
+}
+
+
+.topnavv a {
+  float: left;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  background-color: black;
 
 }
 
