@@ -424,7 +424,7 @@ h1 {
     font-size: 2em;
     margin-block-start: 2em;
     margin-block-end: 2em;
-    margin-inline-start: 30px;
+    margin-inline-start: 70px;
     margin-inline-end: 0px;
     font-weight: bold;
 }
@@ -434,12 +434,12 @@ h2 {
     font-size: 1.3em;
     margin-block-start: 2em;
     margin-block-end: 2em;
-    margin-inline-start: 30px;
+    margin-inline-start: 70px;
     margin-inline-end: 0px;
 
 }
 
-.button {
+.buttonv {
   background-color: #2e4855;
   border: none;
   color: white;
@@ -448,11 +448,20 @@ h2 {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 20px;
+  margin: 20px 70px;
   cursor: pointer;
 }
 
-.button:hover {
+.buttonv:hover {
   background-color: #223845;
   color: white;
+}
+
+body {
+  background-image: url("pictures/Background.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  margin-right: 0px;
+  background-size:100%;
+  opacity: 0.95;
 }
