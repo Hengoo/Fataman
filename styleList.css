@@ -78,6 +78,11 @@ body {
   top: 30px;
 }
 
+.listElement .exc{
+  position: relative;
+  top: 100px;
+}
+
 .listElement .title{
   position: relative;
   margin: 10px 14px;
