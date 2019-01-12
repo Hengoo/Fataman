@@ -49,15 +49,16 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 /* The Close Button */
-.close {
+.modal-header .close {
+  position: relative;
 	color: #aaaaaa;
 	float: right;
 	font-size: 28px;
 	font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.modal-header .close:hover,
+.modal-header .close:focus {
 	color: #000;
 	text-decoration: none;
 	cursor: pointer;
