@@ -14,9 +14,12 @@
 <body>
 
 
+    <div class="topnavv">
+        <div>
+            <a class="header--logo" href="fataman.html"> <b>re</b>INVENT immobilien</a>
+        </div>
+    </div>
     <div class="topnav">
-        <img src="pictures/reinvent.jpg" width="183" height="48" href="Fataman.html">
-
         <a href="#Contact">Contact</a>
         <a href="#About">About</a>
 
@@ -34,8 +37,6 @@
                      </div>
                  </div>
         </div>
-
-
 
 
         <div class="dropdown">
@@ -65,11 +66,11 @@
 
     <div class = "listContainer">
         <div class  = "filterBody">
-            <p>Filter by:</p>
-            <button onclick="buttonPress('price', 0 , 0)", class = "sortButton">Prize</button>
+            <h3>Filter by:</h3>
+            <button onclick="buttonPress('price', 0 , 0)", class = "sortButton">Price</button>
             <button onclick="buttonPress('size' , 1 , 1)", class = "sortButton">Size</button>
             <button onclick="buttonPress('rooms', 1 , 2)", class = "sortButton">Rooms</button>
-            <button onclick="buttonPress('exclusive', 1 , 3)", class = "sortButton">Reinvent Exclusive</button>
+            <button onclick="buttonPress('exclusive', 1 , 3)", class = "sortButton">reINVENT Exclusive</button>
         </div>
         <!-- The sorting reads the number out of the html element with the respective class names and sorts the list by that. -->
         <!-- To the exclusive: the paragraph that is invisible is needed for the sorting. 0 means NOT exclusive, 1 means exclusive -->
@@ -78,49 +79,57 @@
         <div class = "listBody">
             <ul class="ulist", id = "id01">
                 <li class="listElement">
-                    <p class = "title">HouseTitle1</p>
+                    <p class = "title">Luxury apartment in Maxvorstadt </p>
                     <img src="textures/HousePlan.jpg" alt="2dSmall" style="width:300px; position: relative; float: left;">
-                    <p class="price">Price: 12345</p>
-                    <p class="size">Size: 112qm</p>
-                    <p class="rooms">Rooms: 7</p>
-                    <p class="desc">
+                    <p class="general"> 150 m<sup>2</sup> | 7 Rooms </p>
+                    <p hidden class="size">150 m<sup>2</sup></p>
+                    <p hidden class="rooms"> Rooms: 7</p>
+                    <p class="price"> <b>800.000 € </b> </p>
+
+                    <p hidden class="desc">
                         This house is the best
                     </p>
                     <p class="exclusive", style="visibility: hidden; position: fixed;">0</p>
                 </li>
                 <li class="listElement">
-                    <p class = "title">HouseTitle2</p>
+                    <p class = "title">Beautiful house in Bogenhausen</p>
                     <img src="textures/HousePlan.jpg" alt="2dSmall" style="width:300px; position: relative; float: left;">
-                    <p class="price">Price: 45312</p>
-                    <p class="size">Size: 456qm</p>
-                    <p class="rooms">Rooms: 3</p>
-                    <p class="desc">
+                    <p class="general"> 250 m<sup>2</sup> | 5 Rooms </p>
+                    <p hidden class="size">250 m<sup>2</sup></p>
+                    <p hidden class="rooms">Rooms: 5 </p>
+                    <p class="price"><b> 2.400.000 € </b></p>
+
+                    <p hidden class="desc">
                         This house is the best
                     </p>
                     <p class="exclusive", style="visibility: hidden; position: fixed;">0</p>
                 </li>
                 <li class="listElement">
-                    <p class = "title">HouseTitle3</p>
+                    <p class = "title">Attractice architecture in Traunstein</p>
                     <img src="textures/HousePlan.jpg" alt="2dSmall" style="width:300px; position: relative; float: left;">
-                    <p class="price">Price: 75143</p>
-                    <p class="size">Size: 1200qm</p>
-                    <p class="rooms">Rooms: 3</p>
-                    <p class="desc">
+                    <p class="general"> 200 m<sup>2</sup> | 3 Rooms </p>
+                    <p hidden class="size"> 200 m<sup>2</sup></p>
+                    <p hidden class="rooms">Rooms: 3 </p>
+                    <p class="price"> <b> 1.200.000 € </b> </p>
+
+                    <p hidden class="desc">
                         This house is better
                     </p>
-                    <p class="exc">Reinvent Exclusive</p>
+                    <p class="exc">reINVENT immobilien Exclusive</p>
                     <p class="exclusive", style="visibility: hidden; position: fixed;">1</p>
                 </li>
                 <li class="listElement">
-                    <p class = "title">HouseTitle4</p>
+                    <p class = "title">Single room apartment in Olympiapark</p>
                     <img src="textures/HousePlan.jpg" alt="2dSmall" style="width:300px; position: relative; float: left;">
-                    <p class="price">Price: 7512</p>
-                    <p class="size">Size: 100qm</p>
-                    <p class="rooms">Rooms: 2</p>
-                    <p class="desc">
+                    <p class="general"> 30 m<sup>2</sup> | 1 Room </p>
+                    <p hidden class="size"> 30 m<sup>2</sup></p>
+                    <p hidden cpass="rooms">Rooms: 1 </p>
+                    <p class="price"> <b> 300.000 € </b></p>
+
+                    <p hidden class="desc">
                         This house is the best
                     </p>
-                    <p class="exc">Reinvent Exclusive</p>
+                    <p class="exc">reINVENT immobilien Exclusive</p>
                     <p class="exclusive", style="visibility: hidden; position: fixed;">1</p>
                 </li>
             </ul>
