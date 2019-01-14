@@ -525,6 +525,8 @@ img {
     background-repeat:   no-repeat;
     margin: 0px;
     padding: 50px;
+    height: auto;
+    width: auto\9; /* ie8 */
 
 }
 
