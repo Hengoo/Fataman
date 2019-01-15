@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
 	<title> reINVENT Immobilien | one stop shop for realestate </title>
-	<link href="style.css" type="text/css" rel="stylesheet" />
+	<link href="style_contact.css" type="text/css" rel="stylesheet" />
 	<script src="./js/ListLoader.js"></script>
 	<!-- <link href="styles.css" rel="stylesheet" /> -->
 
@@ -64,14 +64,48 @@
     }
     </script>
 
-    <div class="landing--title-header">
-        <h1> The one stop shop <br> for real estate </h1>
+    <h2>
+        Any questions? Contact us!
+    </h2>
 
-        <h2> From reINVENT the # 1 software <br> for construction projects   </h2>
-
-        <a href="#" class="buttonv"> Rent</a>
-        <a href="FatamanBuy.html" class="buttonv"> Buy</a>
-
+    <div class="container">
+      <form action="mailto:fataman.tech@gmail.com" method="post" enctype="text/plain">
+        <div class="row">
+          <div class="col-25">
+            <label for="fname">First Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">Last Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">Email </label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="email" name="email" placeholder="Your Email..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="subject">Subject</label>
+          </div>
+          <div class="col-75">
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
     </div>
 
 	<div class="footer">
