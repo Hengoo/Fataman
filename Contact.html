@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
 	<title> reINVENT Immobilien | one stop shop for realestate </title>
-	<link href="style_about.css" type="text/css" rel="stylesheet" />
+	<link href="style_contact.css" type="text/css" rel="stylesheet" />
 	<script src="./js/ListLoader.js"></script>
 	<!-- <link href="styles.css" rel="stylesheet" /> -->
 
@@ -64,52 +64,48 @@
     }
     </script>
 
+    <h2>
+        Any questions? Contact us!
+    </h2>
 
-
-    <h2> Meet The Team</h2>
-
-    <div class="row">
-      <div class="column">
-        <div class="card">
-          <img src="pictures/AL.jpg" alt="Andreas Leitner" style="width:100%" >
-          <div class="container">
-            <h2>Andreas Leitner</h2>
-            <p class="title">MS in Informatics, Games Engineering</p>
-            <p>  3D and IT Guy</p>
+    <div class="container">
+      <form action="mailto:fataman.tech@gmail.com" method="post" enctype="text/plain">
+        <div class="row">
+          <div class="col-25">
+            <label for="fname">First Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
           </div>
         </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <img src="pictures/FB.jpg" alt="Farzan Banihashemi" style="width:100%">
-          <div class="container">
-            <h2>Farzan Banihashemi</h2>
-            <p class="title">MS in Management, Energy Efficient Buildings </p>
-            <p> The construction guy</p>
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">Last Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
           </div>
         </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <img src="pictures/MK.jpg" alt="Maria Krutikova" style="width:100%">
-          <div class="container">
-            <h2>Maria Krutikova</h2>
-            <p class="title">MS in Consumer Affairs </p>
-            <p> Fan of Agile principals</p>
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">Email </label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="email" name="email" placeholder="Your Email..">
           </div>
         </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <img src="pictures/TH.jpg" alt="Tatevik Hovhannisyan" style="width:100%">
-          <div class="container">
-            <h2>Tatevik Hovhannisyan</h2>
-            <p class="title">MS in Management and Technology </p>
-            <p> IT and innovation enthusiast</p>
+        <div class="row">
+          <div class="col-25">
+            <label for="subject">Subject</label>
+          </div>
+          <div class="col-75">
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
           </div>
         </div>
-      </div>
+        <div class="row">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
     </div>
 
 	<div class="footer">
@@ -117,6 +113,7 @@
         <p style="display:inline" href="#Copyright">Copyright 2019 Fataman. All rights reserved.</p>
 
     </div>
+
 
 </body>
 
