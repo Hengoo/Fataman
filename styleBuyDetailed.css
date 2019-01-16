@@ -1,8 +1,12 @@
 /* All css parts of the final buy page thing */
 .rightInfoBox{
-  float: middle;
+  /*float: middle;*/
 }
 
-.allModalContainer{
-  float: left;
+.flexbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /*float: left;*/
 }
