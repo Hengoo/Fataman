@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+	<title> reINVENT Immobilien | one stop shop for realestate </title>
+	<link href="style_detailed.css" type="text/css" rel="stylesheet" />
+	<link href="styleBuyDetailed.css" type="text/css" rel="stylesheet" />
+	<link href="style3d.css" type="text/css" rel="stylesheet" />
+	<link href="styleSlideshow.css" type="text/css" rel="stylesheet" />
+	<!-- <link href="styles.css" rel="stylesheet" /> -->
+
+</head>
+
+<body>
+	<div class="topnavv">
+		<div>
+			<a class="header--logo" href="Fataman.html"> <b>re</b>INVENT immobilien</a>
+		</div>
+	</div>
+	<div class="topnav">
+		<a href="Contact.html">Contact</a>
+		<a href="About.html">About</a>
+
+		<div class="dropdown">
+			<button class="dropbtn">Login
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<div class="login-container">
+					<form action="/action_page.php">
+						<input type="text" placeholder="Username" name="username">
+						<input type="text" placeholder="Password" name="psw">
+						<a href="FatamanSell.html" class="button">Login</a>
+					</form>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="dropdown">
+			<button class="dropbtn">Search
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="#">Rent Property</a>
+				<a href="FatamanBuy.html">Buy Property</a>
+			</div>
+		</div>
+
+		<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+	</div>
+
+
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+	</script>
+
+	<div>
+		<div class="flexbox">
+
+
+			<div class="rightInfoBox">
+				<h1> Luxurious apartment in Maxvorstadt </h1>
+
+				<h3> Short Summary </h3>
+				<input type="text" placeholder="Short summary">
+				<h3> Detailed Information </h3>
+
+				<textarea type="text" rows="10" placeholder="Detailed summary" style="border: 1px solid #ccc; width: 100%;"> </textarea>
+
+				<h3> Price </h3>
+				<input type="text" placeholder="Price in Euro">
+
+				<h3>Possible additional advertisements:</h3>
+				<input type="checkbox" value="ImmobilienScout"> <a href="https://www.immobilienscout24.de/" target="_blank">ImmobilienScout24</a><br>
+				<input type="checkbox" value="ImmobilienScout"> <a href="https://www.immonet.de/bayern/muenchen-wohnung-kaufen.html" target="_blank">immonet.de</a><br>
+				<input type="checkbox" value="ImmobilienScout"> <a href="https://immobilienmarkt.sueddeutsche.de/Angebote/kaufen/3_Zimmer_Wohnung-Stadt_Muenchen" target="_blank">Immobilienmarkt Süddeutsche Zeitung</a><br>
+
+				<br>
+
+				<a href="#" class="buttonv"> Finalize Offer</a>
+
+				<br>
+
+				<h3>Preview of applets</h3>
+
+				<!--This div is for all modals (i think its reasonable to put all next to each other) -->
+				<div>
+					<div class="imgButton" style="float:left; border-bottom: none; border-right: none; width:400px; height : 300px;">
+						<img src="textures/modelPreview.jpg" alt="preciew" style="width:100%; height: 100%;">
+						<button id="myBtn" class=button>Open Interactive View</button>
+					</div>
+
+					<!-- Trigger/Open The Modal -->
+					<div class="imgButton" style="float:left; border-bottom: none; width:400px; height : 300px;">
+						<img src="textures/HousePlan.jpg" alt="2dSmall" style="width:100%; height: 100%;">
+						<button id="myBtn2" class=button>Open Large View</button>
+					</div>
+				</div>
+
+				<div>
+					<div class="imgButton" style="float: left; border-right: none; width:400px; height : 300px;">
+						<img src="pictures/Int3.jpg" alt="2dSmall" style="width:100%; height: 100%;">
+						<button id="myBtn3" class=button>Open Images</button>
+					</div>
+
+					<div class="imgButton" style="float: left; width:400px; height : 300px;">
+						<img src="pictures/Map.jpg" alt="2dSmall" style="width:100%">
+						<button id="myBtn4" class=button>Open Map</button>
+					</div>
+
+
+
+
+				</div>
+
+
+				<!-- The 3d Modal -->
+				<div id="myModal" class="modal">
+
+					<!-- Modal content -->
+					<div class="modal-content">
+						<div class="modal-header">
+							<span class="close">&times;</span>
+							<h2>Luxurious apartment in Maxvorstadt</h2>
+						</div>
+						<div id="container3d" class="container3d">
+							<script src="./js/three.min.js"></script>
+							<script src="./js/loaders/OBJLoader.js"></script>
+							<script src="./js/OrbitControls.js"></script>
+							<script src="./js/loaders/GLTFLoader.js"></script>
+							<script>
+								var container;
+								var camera, scene, renderer;
+								var mouseX = 0, mouseY = 0;
+								var windowHalfX = window.innerWidth / 2;
+								var windowHalfY = window.innerHeight / 2;
+								var object;
+
+								var controls;
+								var root;
+
+								init();
+								animate();
+
+								function init() {
+									container = document.createElement('div');
+									root = document.getElementById("container3d")
+									root.appendChild(container);
+
+									width = root.clientWidth;
+									height = root.clientHeight;
+
+									windowHalfX = width / 2;
+									windowHalfY = height / 2;
+
+									console.log(width);
+
+									//document.body.appendChild( container );
+									camera = new THREE.PerspectiveCamera(45, width / height, 0.25, 500);
+									camera.position.x = 33
+									camera.position.y = 10
+									camera.position.z = -30
+
+									onMouseDownPosition = new THREE.Vector2();
+
+									//controls:
+									controls = new THREE.OrbitControls(camera);
+									controls.target.set(35, 0.8, - 30);
+									controls.maxPolarAngle = Math.PI / 2.001;
+									controls.update();
+									controls.enabled = false;
+
+									// scene
+									scene = new THREE.Scene();
+									var ambientLight = new THREE.AmbientLight(0xcccccc, 0.4);
+									scene.add(ambientLight);
+									var pointLight = new THREE.PointLight(0xffffff, 0.8);
+									camera.add(pointLight);
+									light = new THREE.HemisphereLight(0xbbbbff, 0x444422);
+									light.position.set(34, 1, -30);
+									//scene.add( light );
+									scene.add(camera);
+
+									//background
+									var urls = ['px.jpg', 'nx.jpg', 'py.jpg', 'ny.jpg', 'pz.jpg', 'nz.jpg'];
+									var loader = new THREE.CubeTextureLoader().setPath('textures/skyboxsun25deg/');
+									var background = loader.load(urls);
+									scene.background = background;
+
+									// model
+									var loader = new THREE.GLTFLoader().setPath('models/House/');
+									loader.load('House2.gltf', function (gltf) {
+										gltf.scene.traverse(function (child) {
+											if (child.isMesh) {
+												child.material.envMap = background;
+											}
+										});
+										scene.add(gltf.scene);
+									}, undefined, function (e) {
+										console.error(e);
+									});
+
+									//Prepare Renderer
+									renderer = new THREE.WebGLRenderer({ antialias: true });
+									renderer.setPixelRatio(window.devicePixelRatio);
+									renderer.setSize(width, height);
+									renderer.gammaOutput = true;
+									container.appendChild(renderer.domElement);
+
+
+									//window.addEventListener( 'resize', onWindowResize, false );
+								}
+
+								function contextmenu(event) {
+									event.preventDefault();
+								}
+
+								function onWindowResize() {
+									const canvas = renderer.domElement;
+									// look up the size the canvas is being displayed
+									const width = root.clientWidth;
+									const height = root.clientHeight;
+
+									//only resize if needed
+									if (canvas.width !== width || canvas.height !== height) {
+										console.log(width)
+										windowHalfX = width / 2;
+										windowHalfY = height / 2;
+										camera.aspect = width / height;
+
+										camera.updateProjectionMatrix();
+
+										renderer.setSize(width, height);
+
+										if (width === 0) {
+											//deactivate control so we have normal website control again
+											controls.enabled = false;
+										} else {
+											//activate control again
+											controls.enabled = true;
+										}
+									}
+
+									//renderer.setSize( window.innerWidth, window.innerHeight );
+								}
+
+								function animate() {
+									requestAnimationFrame(animate);
+									render();
+								}
+								function render() {
+									//manually call resize every frame
+									onWindowResize();
+									if (windowHalfX === 0) {
+										//this loads the 3d image when you open the page. remove it and it loads it when you open the modal
+										renderer.render(scene, camera);
+									} else {
+										renderer.render(scene, camera);
+									}
+									//console.log( renderer.info );
+								}
+							</script>
+						</div>
+					</div>
+				</div>
+
+				<!-- The 2d Modal -->
+				<div id="myModal2" class="modal">
+					<!-- Modal content -->
+					<div class="modal-content" style="height: 100%; display: flex; flex-direction: column; max-width: 1000px; ">
+						<div class="modal-header">
+							<span class="close">&times;</span>
+							<h2>Luxurious apartment in Maxvorstadt</h2>
+						</div>
+						<img src="textures/HousePlan.jpg" alt="2dSmall" style="height:auto; width: auto">
+					</div>
+				</div>
+
+				<!-- The Map Modal -->
+				<div id="myModal4" class="modal">
+					<!-- Modal content -->
+					<div class="modal-content" style="height: 100%; display: flex; flex-direction: column; ">
+						<div class="modal-header">
+							<span class="close">&times;</span>
+							<h2>Luxurious apartment in Maxvorstadt</h2>
+						</div>
+
+						<div id="Map" style="width:100%; height: 100%"></div>
+						<script src="OpenLayers.js"></script>
+						<script>
+							// @ts-check
+							/// <reference path="./OpenLayers.d.ts" />
+							var lat = 48.151945;
+							var lon = 11.564725;
+							var zoom = 18;
+
+							var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
+							var toProjection = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
+							var position = new OpenLayers.LonLat(lon, lat).transform(fromProjection, toProjection);
+
+							map = new OpenLayers.Map("Map");
+							var mapnik = new OpenLayers.Layer.OSM();
+							map.addLayer(mapnik);
+
+							var markers = new OpenLayers.Layer.Markers("Markers");
+							map.addLayer(markers);
+							markers.addMarker(new OpenLayers.Marker(position));
+
+							map.setCenter(position, zoom);
+
+							function redo_map() {
+								map.updateSize();
+							}
+						</script>
+					</div>
+				</div>
+
+				<!-- The Slideshow modal -->
+				<div id="myModal3" class="modal">
+					<div class="modal-content" style="max-width: 1000px; width: 1000px;">
+						<div class="modal-header">
+							<span class="close">&times;</span>
+							<h2>Luxurious apartment in Maxvorstadt</h2>
+						</div>
+
+						<div class="slideshow-container">
+
+							<div class="mySlides fade">
+								<div class="numbertext">1 / 5</div>
+								<img src="pictures/Ext.jpg" style="width:100%">
+								<div class="text">Exterior</div>
+							</div>
+
+							<div class="mySlides fade">
+								<div class="numbertext">2 / 5</div>
+								<img src="pictures/Int1.jpg" style="width:100%">
+								<div class="text">Kitchen</div>
+							</div>
+
+							<div class="mySlides fade">
+								<div class="numbertext">3 / 5</div>
+								<img src="pictures/Int2.jpg" style="width:100%">
+								<div class="text"> Living Room</div>
+							</div>
+
+							<div class="mySlides fade">
+								<div class="numbertext">4 / 5</div>
+								<img src="pictures/Int3.jpg" style="width:100%">
+								<div class="text">Bedroom</div>
+							</div>
+
+							<div class="mySlides fade">
+								<div class="numbertext">5 / 5</div>
+								<img src="pictures/Pool.jpg" style="width:100%">
+								<div class="text">Pool</div>
+							</div>
+
+							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+						</div>
+						<br>
+
+						<div style="text-align:center">
+							<span class="dot" onclick="currentSlide(1)"></span>
+							<span class="dot" onclick="currentSlide(2)"></span>
+							<span class="dot" onclick="currentSlide(3)"></span>
+							<span class="dot" onclick="currentSlide(4)"></span>
+							<span class="dot" onclick="currentSlide(5)"></span>
+
+						</div>
+
+						<script>
+							var slideIndex = 1;
+							showSlides(slideIndex);
+
+							function plusSlides(n) {
+								showSlides(slideIndex += n);
+							}
+
+							function currentSlide(n) {
+								showSlides(slideIndex = n);
+							}
+
+							function showSlides(n) {
+								var i;
+								var slides = document.getElementsByClassName("mySlides");
+								var dots = document.getElementsByClassName("dot");
+								if (n > slides.length) { slideIndex = 1 }
+								if (n < 1) { slideIndex = slides.length }
+								for (i = 0; i < slides.length; i++) {
+									slides[i].style.display = "none";
+								}
+								for (i = 0; i < dots.length; i++) {
+									dots[i].className = dots[i].className.replace(" active", "");
+								}
+								slides[slideIndex - 1].style.display = "block";
+								dots[slideIndex - 1].className += " active";
+							}
+						</script>
+					</div>
+				</div>
+
+				<script>
+					//The script that manages the popups:
+
+					// Get the modal
+					var modal = document.getElementById('myModal');
+					var modal2 = document.getElementById('myModal2');
+					var modal3 = document.getElementById('myModal3');
+					var modal4 = document.getElementById('myModal4');
+
+					// Get the button that opens the modal
+					var btn = document.getElementById("myBtn");
+					var btn2 = document.getElementById("myBtn2");
+					var btn3 = document.getElementById("myBtn3");
+					var btn4 = document.getElementById("myBtn4");
+
+					// Get the <span> element that closes the modal
+					var span = modal.querySelector(".close");
+					var span2 = modal2.querySelector(".close");
+					var span3 = modal3.querySelector(".close");
+					var span4 = modal4.querySelector(".close");
+
+					//let buttons = [btn, btn2, btn3, btn4];
+					//let modals = [modal, modal2, modal3, modal4];
+
+					// When the user clicks the button, open the modal 
+					btn.onclick = function () {
+						modal.style.display = "block";
+					}
+					btn2.onclick = function () {
+						modal2.style.display = "block";
+					}
+					btn3.onclick = function () {
+						modal3.style.display = "block";
+					}
+					btn4.onclick = function () {
+						modal4.style.display = "block";
+						redo_map();
+					}
+
+					// When the user clicks on <span> (x), close the modal
+					span.onclick = function () {
+						modal.style.display = "none";
+					}
+					span2.onclick = function () {
+						modal2.style.display = "none";
+					}
+					span3.onclick = function () {
+						modal3.style.display = "none";
+					}
+					span4.onclick = function () {
+						modal4.style.display = "none";
+					}
+					// When the user clicks anywhere outside of the modal, close it
+					window.onclick = function (event) {
+						if (event.target == modal) {
+							modal.style.display = "none";
+						}
+						if (event.target == modal2) {
+							modal2.style.display = "none";
+						}
+						if (event.target == modal3) {
+							modal3.style.display = "none";
+						}
+						if (event.target == modal4) {
+							modal4.style.display = "none";
+						}
+					}
+				</script>
+
+
+				<div class="footer">
+
+					<p style="display:inline" href="#Copyright">Copyright 2019 Fataman. All rights reserved.</p>
+
+				</div>
+
+
+</body>
+
+</html>
