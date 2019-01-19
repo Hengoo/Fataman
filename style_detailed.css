@@ -463,4 +463,27 @@ h2 {
   color: white;
 }
 
+div.rightInfoBox {
+    background-color: antiquewhite;
+}
+
+dl {
+    display: block;
+    font-size: 1em;
+    margin-block-start: 2em;
+    margin-block-end: 2em;
+    margin-inline-start: 70px;
+    margin-inline-end: 0px;
+
+}
+
+p {
+    display: block;
+    font-size: 1em;
+    margin-block-start: 2em;
+    margin-block-end: 2em;
+    margin-inline-start: 70px;
+    margin-inline-end: 0px;
+
+}
 
