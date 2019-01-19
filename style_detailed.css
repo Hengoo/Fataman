@@ -430,7 +430,7 @@ h1 {
     font-size: 2em;
     margin-block-start: 2em;
     margin-block-end: 2em;
-    margin-inline-start: 70px;
+    margin-inline-start: 20px;
     margin-inline-end: 0px;
     font-weight: bold;
 }
@@ -440,7 +440,7 @@ h2 {
     font-size: 1.3em;
     margin-block-start: 2em;
     margin-block-end: 2em;
-    margin-inline-start: 70px;
+    margin-inline-start: 20px;
     margin-inline-end: 0px;
 
 }
@@ -472,8 +472,8 @@ dl {
     font-size: 1em;
     margin-block-start: 2em;
     margin-block-end: 2em;
-    margin-inline-start: 70px;
-    margin-inline-end: 0px;
+    margin-inline-start: 20px;
+    margin-inline-end: 20px;
 
 }
 
@@ -482,8 +482,8 @@ p {
     font-size: 1em;
     margin-block-start: 2em;
     margin-block-end: 2em;
-    margin-inline-start: 70px;
-    margin-inline-end: 0px;
+    margin-inline-start: 20px;
+    margin-inline-end: 20px;
 
 }
 

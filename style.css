@@ -121,9 +121,6 @@ div.price {
       text-decoration: none;
     }
 
-    li a:hover:not(.active) {
-      background-color: #2e4855;
-    }
 
     .active {
       background-color: #000000;
