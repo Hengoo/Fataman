@@ -73,10 +73,24 @@
 				<h1 style="margin-left: 10px"> Luxurious apartment in Maxvorstadt </h1>
 
 				<h3 style="margin-left: 10px"> Short Summary </h3>
-				<input type="text" placeholder="Short summary" style="margin-left: 10px; width: calc(100% - 20px);">
+				<input type="text" value ="This newly built stylish and representative apartment will be ready in Q2 2019." placeholder="Short summary" style="margin-left: 10px; width: calc(100% - 20px);">
 				<h3 style="margin-left: 10px"> Detailed Information </h3>
 
-				<textarea type="text" rows="10" placeholder="Detailed summary" style="border: 1px solid #ccc;margin-left: 10px; width: calc(100% - 20px)"> </textarea>
+				<textarea type="text" rows="10" value ="test" placeholder="Detailed summary" style="border: 1px solid #ccc;margin-left: 10px; width: calc(100% - 20px)">
+This newly built stylish and representative apartment will be ready in Q2 2019. Designed
+by famous architects, the object consists of 7 rooms, perfect for big families and investment purposes.
+
+    - Balconies and terraces with gardens 
+    - Real wood parquet floors / solid oak 
+    - underfloor heating 
+    - electric blinds 
+    - electronic home control (Smart Home System) 
+    - Door intercoms with camera 
+    - High quality bathrooms 
+    - large panoramic windows 
+    - light-flooded rooms 
+	- high ceilings 
+</textarea>
 
 				<h3 style="margin-left: 10px"> Price </h3>
 				<input type="text" placeholder="Price in Euro" style="margin-left: 10px; width: calc(100% - 20px);">
@@ -97,13 +111,13 @@
 				<!--This div is for all modals (i think its reasonable to put all next to each other) -->
 				<div>
 					<div class="imgButton" style="float:left; border-bottom: none; border-right: none; width:400px; height : 300px;">
-						<img src="textures/modelPreview.jpg" alt="preciew" style="width:100%; height: 100%;">
+						<img src="pictures/modelPreview.jpg" alt="preciew" style="width:100%; height: 100%;">
 						<button id="myBtn" class=button>Open Interactive View</button>
 					</div>
 
 					<!-- Trigger/Open The Modal -->
 					<div class="imgButton" style="float:left; border-bottom: none; width:400px; height : 300px;">
-						<img src="textures/HousePlan.jpg" alt="2dSmall" style="width:100%; height: 100%;">
+						<img src="pictures/HousePlan.jpg" alt="2dSmall" style="width:100%; height: 100%;">
 						<button id="myBtn2" class=button>Open Large View</button>
 					</div>
 				</div>
@@ -283,7 +297,7 @@
 							<span class="close">&times;</span>
 							<h2>Luxurious apartment in Maxvorstadt</h2>
 						</div>
-						<img src="textures/HousePlan.jpg" alt="2dSmall" style="height:auto; width: auto">
+						<img src="pictures/HousePlan.jpg" alt="2dSmall" style="height:auto; width: auto">
 					</div>
 				</div>
 
@@ -297,7 +311,7 @@
 						</div>
 
 						<div id="Map" style="width:100%; height: 100%"></div>
-						<script src="OpenLayers.js"></script>
+						<script src="./js/OpenLayers.js"></script>
 						<script>
 							// @ts-check
 							/// <reference path="./OpenLayers.d.ts" />
