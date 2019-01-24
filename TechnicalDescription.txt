@@ -1,0 +1,60 @@
+Technical description:
+
+The website is hosted on https://fataman.tk/
+
+The github link for the source code: https://github.com/Hengoo/Fataman
+
+Since the project is a website it mainly is html, css and some javascript.
+The 3D environment is written with the libary three.js 
+Libary documentation: https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene
+
+Short description of each file:
+
+index.html
+	the main page
+
+FatamanBuy.html
+	List of available apartments with buttons to filter by different attributes
+	Sorting and button management is done by javascript (in js/listSort.js)
+	
+	The content that is shown is hardcoded, but could also be loaded from a JSON file.
+	(first test is in js/ListLoader.js but is not used for the final prototype)
+
+FatamanRent
+	Basically the same structure as FatamanBuy but with different content in the list
+
+FatamanBuyDetailed.html
+	The detailed view of an apartment.
+	
+	The script to manage the popups (called modal) is in the html
+	
+	3D view uses 5 scripts:
+		js/three.min.js
+			the minified 3d libary
+		js/loader/GLTFLoader.js
+			the function to load GLTF files (an industry standart for 3d models with textures and materials
+		js/3DView.js
+			the code that combines everything and creates the window
+		js/OrbitControls.js
+			the code for the camera control
+	
+	The scripts to manage the interactive map (by openmaps) and the picture slideshow are in the html
+	
+FatamanSell.html
+	Basically the same as FatamanBuy but with slightly different content
+
+FatamanSellDetailed
+	Basically the same as FatamanBuyDetailed but with slightly different content and textboxes to fill in.
+	
+	
+About.html
+	Site with images and description of team members
+
+Contact.html
+	Site to contact us (sends an email to an adress)
+
+Depricated / test files:
+3DTest.html Maps.html Slideshow.html 
+	are the prototypes for the features that are in FatamanBuyDetailed and FatamanSellDetailed
+
+
