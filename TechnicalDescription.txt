@@ -4,7 +4,7 @@ The website is hosted on https://fataman.tk/
 
 The github link for the source code: https://github.com/Hengoo/Fataman
 
-Since the project is a website it mainly is html, css and some javascript.
+Since the project is a website it mainly consists out of html, css and some javascript.
 The 3D environment is written with the libary three.js 
 Libary documentation: https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene
 
@@ -20,7 +20,7 @@ FatamanBuy.html
 	The content that is shown is hardcoded, but could also be loaded from a JSON file.
 	(first test is in js/ListLoader.js but is not used for the final prototype)
 
-FatamanRent
+FatamanRent.html
 	Basically the same structure as FatamanBuy but with different content in the list
 
 FatamanBuyDetailed.html
@@ -38,10 +38,10 @@ FatamanBuyDetailed.html
 		js/OrbitControls.js
 			the code for the camera control
 	
-	The scripts to manage the interactive map (by openmaps) and the picture slideshow are in the html
+	The scripts to manage the interactive map (using openStreetMap: https://wiki.openstreetmap.org/wiki/Using_OpenStreetMap ) and the picture slideshow are in the html
 	
 FatamanSell.html
-	Basically the same as FatamanBuy but with slightly different content
+	Basically the same as FatamanBuy but with slightly different content (you can access this page after you "log" into your account (in the header))
 
 FatamanSellDetailed
 	Basically the same as FatamanBuyDetailed but with slightly different content and textboxes to fill in.
