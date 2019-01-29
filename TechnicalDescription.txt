@@ -46,6 +46,8 @@ FatamanSell.html
 FatamanSellDetailed
 	Basically the same as FatamanBuyDetailed but with slightly different content and textboxes to fill in.
 	
+FatamanSellConfirm.html
+	Simple sell confirmation site
 	
 About.html
 	Site with images and description of team members
